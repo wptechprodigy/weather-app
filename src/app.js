@@ -8,7 +8,7 @@ const getWeatherForecast = require('./utils/getWeatherForecast');
 const app = express();
 
 // Port definition
-const PORT = 3030;
+const PORT = process.env.PORT || 3030;
 
 // Define path for Express config
 const publicDirectory = path.join(__dirname, '../public');
