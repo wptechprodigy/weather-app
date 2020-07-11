@@ -49,8 +49,6 @@ app.get('/weather', (req, res) => {
       });
     }
 
-    // const { latitude, longitude, location } = data;
-
     getWeatherForecast(latitude, longitude, (error, forecast) => {
       if (error) {
         return res.send({
@@ -59,9 +57,9 @@ app.get('/weather', (req, res) => {
       }
 
       const {
-        current: { temp, weather },
+        current: { temp, weather, feels_like },
       } = forecast;
-      const forecastMsg = `${weather[0].description}. The temperature is ${temp} degrees outside.`;
+      const forecastMsg = `${weather[0].description}. The temperature is ${temp} degrees outside, and it feels like ${feels_like} degrees.`;
 
       res.send({
         location,
