@@ -4,6 +4,10 @@ A weather app built using Node JS on the backend with ExpressJS and OpenWeather 
 
 Handlebars is used for building the user interface.
 
+The app makes use of MapBox GeoCoding features to search for location. The location coordinates are then supplied to the OpenWeather API to get the weather forecast for the location.
+
+MapBox is a great tool and I enjoy using it.
+
 ## Is it breathing?
 
 Yes. Sure, it is. The app has been deployed on Heroku. It is accessible [*here*](https://waheedcodes-weather-app.herokuapp.com/).
